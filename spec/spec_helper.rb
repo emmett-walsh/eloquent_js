@@ -1,7 +1,10 @@
 require 'capybara/rspec'
+require 'capybara/poltergeist'
 require_relative '../my_app'
 
-Capybara.app = MyApp
+Capybara.default_driver = :poltergeist
+Capybara.current_driver = :poltergeist
+Capybara.app = MyApp.new
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

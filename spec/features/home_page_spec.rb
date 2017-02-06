@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'capybara/rspec'
 
 describe 'the home page', type: :feature do
   it 'says hello' do
