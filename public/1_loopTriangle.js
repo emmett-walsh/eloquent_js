@@ -9,7 +9,5 @@ function loopTriangle() {
     layer.appendChild(layerValue);
 
     document.body.appendChild(layer);
-
-    console.log(result);
   }
 }

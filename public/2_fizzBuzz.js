@@ -1,17 +1,25 @@
 "use strict";
 
 function fizzBuzz() {
-  for (var counter = 1; counter <= 100; counter ++) {
+  var result_string = ""
+  for (var counter = 1; counter <= 21; counter ++) {
     if (isDivisibleByFifteen(counter)) {
-      console.log("FizzBuzz");
+      result_string += "FizzBuzz, ";
     } else if (isDivisibleByThree(counter)) {
-      console.log("Fizz");
+      result_string += "Fizz, ";
     } else if (isDivisibleByFive(counter)) {
-      console.log("Buzz");
+      result_string += "Buzz, ";
     } else {
-      console.log(counter);
+      result_string += counter;
+      result_string += ", ";
     }
   }
+
+  var layer = document.createElement("p");
+  var layerValue = document.createTextNode(result_string);
+
+  layer.appendChild(layerValue);
+  document.body.appendChild(layer);
 
   function isDivisibleByFifteen(number) {
     return number % 15 == 0;
